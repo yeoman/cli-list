@@ -1,7 +1,7 @@
 {
   "name": "cli-list",
   "author": "",
-  "desc": "Break CLI lists into arrays.",
+  "desc": "Break CLI lists into arrays",
   "version": "0.1.2",
   "license": "MIT",
   "scripts": {

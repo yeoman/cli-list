@@ -16,7 +16,7 @@ ES6 + Minimist:
 ```javascript
 import list from 'cli-list';
 import minimist from 'minimist';
-const opts = process.argv.slice(2).map(item => minimist(item));
+const opts = list(process.argv.slice(2)).map(item => minimist(item));
 ```
 
 ## Examples
@@ -34,5 +34,5 @@ Expect:
 |:---:|
 | [Jamen Marzonie][github] |
 
-  [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3
+  [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3&s=125
   [github]: https://github.com/jamen

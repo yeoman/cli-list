@@ -1,5 +1,4 @@
-cli-list
-========
+# cli-list
 > Break CLI lists into arrays
 
 ## Installation
@@ -32,7 +31,7 @@ Expect:
 
 ## Credits
 | ![jamen][avatar] |
-|=--------------------------=|
+|:---:|
 | [Jamen Marzonie][github] |
 
   [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3

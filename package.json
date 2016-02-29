@@ -2,7 +2,7 @@
   "name": "cli-list",
   "author": "Jamen Marzonie",
   "desc": "Break CLI lists into arrays",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "scripts": {
     "test": "gulp; tap test",

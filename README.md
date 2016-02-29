@@ -1,32 +1,39 @@
 cli-list
 ========
-> Break CLI lists into arrays.
+> Break CLI lists into arrays
 
 ## Installation
 ```shell
-$ npm install --save-dev cli-list
+$ npm install --save cli-list
 ```
 
 ## Usage
 ```javascript
 var list = require('cli-list');
-var argv = list(process.argv.slice(2));
-console.log(argv);
+var opts = list(process.argv.slice(2));
 ```
 
-Example:
-```
-$ foo hello world, --foo, bar
-[['hello', 'world'], ['--foo'], ['bar']]
-```
-
-With Minimist + ES6:
-```
+ES6 + Minimist:
+```javascript
 import list from 'cli-list';
 import minimist from 'minimist';
-const argv = process.argv.slice(2);
-const opts = list(argv).map(a => minimist(a));
+const opts = process.argv.slice(2).map(item => minimist(item));
 ```
 
-# License
-[MIT](LICENSE) &copy; Jamen Marzonie
+## Examples
+Given:
+```
+$ test foo --bar, baz, --qux
+```
+Expect:
+```
+[['foo', '--bar'], ['baz'], ['--qux']]
+```
+
+## Credits
+| ![jamen][avatar] |
+|=--------------------------=|
+| [Jamen Marzonie][github] |
+
+  [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3
+  [github]: https://github.com/jamen

@@ -2,7 +2,7 @@
   "name": "cli-list",
   "author": "Jamen Marzonie",
   "description": "Break CLI lists into arrays",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "scripts": {
     "test": "tape 'test/**.js' | tap-spec"

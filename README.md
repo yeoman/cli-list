@@ -1,6 +1,22 @@
 # cli-list
 > Break CLI lists into arrays
 
+[![build status][travis-status]][travis] ![downloads][downloads]
+
+Given a "CLI list" like so:
+```
+foo bar, baz --qux, oof
+```
+We can expect `process.argv` to be something such as:
+```javascript
+['foo', 'bar,', 'baz', '--qux,', 'oof']
+```
+If we run this through the `cli-list` function we can split it into sub-arrays where the commas are:
+```javascript
+[['foo', 'bar'], ['baz', '--qux'], ['oof']]
+```
+Theses arrays maintain the `process.argv` style, so they can be used in parity with things like minimist.
+
 ## Installation
 ```shell
 $ npm install --save cli-list
@@ -36,3 +52,6 @@ Expect:
 
   [avatar]: https://avatars.githubusercontent.com/u/6251703?v=3&s=125
   [github]: https://github.com/jamen
+  [travis-status]: https://travis-ci.org/jamen/cli-list.svg
+  [travis]: https://travis-ci.org/jamen/cli-list
+  [downloads]: https://img.shields.io/npm/dm/cli-list.svg

@@ -1,12 +1,9 @@
-var stop = /,$/;
 module.exports = function list(args) {
   var res = [];
-
   var temp = [];
-  var max = args.length;
-  for (var i = 0; i < max; i++) {
+  for (var i = 0, max = args.length; i < max; i++) {
     var arg = args[i];
-    if (stop.test(arg)) {
+    if (arg[arg.length - 1] === ',') {
       temp.push(arg.slice(0, -1));
       res.push(temp);
       temp = [];
@@ -15,6 +12,5 @@ module.exports = function list(args) {
     }
   }
   res.push(temp);
-
   return res;
 };
